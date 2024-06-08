@@ -75,7 +75,7 @@ async function main(){
         const origemArquivo = await verificarArquivo();
         await processaArquivo.lerArquivo(origemArquivo);
 
-        const retry = verificarNovamente();
+        const retry = await verificarNovamente();
         if(!retry) break;
     }
 }
